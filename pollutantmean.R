@@ -1,19 +1,8 @@
 pollutantmean <- function(directory, pollutant, ids = 1:332) {
-  fnames<-list.files(directory,pattern=".csv") 
-  fids<-as.integer(substr(fnames,1,3))
-  if(fids[1]<ids[1]|fids[1]==ids[1]){
-    sid<-ids[1]
-  }else{
-    sid<-fids[1]
-  }
-  if(fids[length(fids)]>ids[length(ids)]|fids[length(fids)]==ids[length(ids)]){
-    eid<-ids[length(ids)]
-  }else{
-    eid<-fids[length(fids)]
-  }
-  rids<-c(sid:eid)
-  vres<-vector(mode="numeric", length=length(rids))
-  for(id in rids){
+  vres<-vector(mode="numeric")
+  i<-0
+  for(id in ids){
+    i<-i+1
     fname<-as.character(id)
     if(id<10){
       fname<-paste("00",fname,sep="")
@@ -25,9 +14,10 @@ pollutantmean <- function(directory, pollutant, ids = 1:332) {
     fname<-paste(fname,"csv",sep=".") 
     fname<-paste(directory,fname,sep="/")
     fdata<-read.csv(fname,header=TRUE,sep=",")
+    p<-is.na(fdata[[pollutant]])
     vpol<-fdata[[pollutant]]
-    vres[id-sid+1]<-mean(vpol,na.rm=TRUE)
+    vres<-c(vres, vpol)
     fdata<-NA
   }
-  return (mean(vres))
+  return (mean(vres,na.rm=TRUE))
 }
