@@ -28,18 +28,23 @@ rankhospital <- function(state, outcome, num = "best") {
     rankNum <- as.numeric(num)
   }
   
+  outcomeState[, colNames] <- sapply(outcomeState[, colNames], as.numeric)
+  
   if (outcome == "heart attack") {
-    outcomeState <- outcomeState[order(outcomeState[, colNames[1]], outcomeState[, "Hospital.Name"]), ]
-    outcomeState <- outcomeState[!is.na(outcomeState[, colNames[1]]), ]
+    nr<-is.na(outcomeState[, colNames[1]])
+    outcomeState <- outcomeState[!nr,]
+    outcomeState <- outcomeState[order(outcomeState[, colNames[1]],outcomeState[, "Hospital.Name"]), ]
     
   }
   else if (outcome == "heart failure") {
-    outcomeState <- outcomeState[order(outcomeState[, colNames[2]], outcomeState[, "Hospital.Name"]), ]
-    outcomeState <- outcomeState[!is.na(outcomeState[, colNames[2]]), ]
+    nr<-is.na(outcomeState[, colNames[2]])
+    outcomeState <- outcomeState[!nr,]
+    outcomeState <- outcomeState[order(outcomeState[, colNames[2]],outcomeState[, "Hospital.Name"]), ]
   }
   else {
-    outcomeState <- outcomeState[order(outcomeState[, colNames[2]], outcomeState[, "Hospital.Name"]), ]
-    outcomeState <- outcomeState[!is.na(outcomeState[, colNames[2]]), ]
+    nr<-is.na(outcomeState[, colNames[3]])
+    outcomeState <- outcomeState[!nr,]
+    outcomeState <- outcomeState[order(outcomeState[, colNames[3]],outcomeState[, "Hospital.Name"]), ]
   }
   
   if (num == "best") {
