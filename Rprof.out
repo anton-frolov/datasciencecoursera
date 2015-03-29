@@ -1,0 +1,12 @@
+sample.interval=20000
+"file.info" "find.package" "index.search" "help" "eval" "eval" "?" 
+"readRDS" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"unique" "simplify2array" "sapply" "RdTags" "writeSection" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"writeContent" "writeSection" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"readRDS" "index.search" "help" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"lazyLoadDBexec" "<Anonymous>" "<Anonymous>" "prepare_Rd" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"lazyLoadDBexec" "<Anonymous>" "<Anonymous>" "prepare_Rd" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"lazyLoadDBexec" "<Anonymous>" "<Anonymous>" "prepare_Rd" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"paste0" "writeLines" "writeLinesUTF8" "of0" "leavePara" "writeSection" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"%in%" "strwrap" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"unlist" "urlify" "paste0" "writeLink" "writeBlock" "writeContent" "writeWrapped" "writeBlock" "writeContent" "writeSection" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
