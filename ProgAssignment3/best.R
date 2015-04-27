@@ -31,7 +31,7 @@ best <- function(state, outcome) {
     best <- outcomeState[which.min(outcomeState[, colNames[2]]), "Hospital.Name"]
   }
   else {
-    best <- outcomeState[which.min(outcomeState[, colNames[2]]), "Hospital.Name"]
+    best <- outcomeState[which.min(outcomeState[, colNames[3]]), "Hospital.Name"]
   }
   
   best

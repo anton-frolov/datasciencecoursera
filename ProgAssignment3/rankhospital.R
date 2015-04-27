@@ -38,8 +38,8 @@ rankhospital <- function(state, outcome, num = "best") {
     outcomeState <- outcomeState[!is.na(outcomeState[, colNames[2]]), ]
   }
   else {
-    outcomeState <- outcomeState[order(outcomeState[, colNames[2]], outcomeState[, "Hospital.Name"]), ]
-    outcomeState <- outcomeState[!is.na(outcomeState[, colNames[2]]), ]
+    outcomeState <- outcomeState[order(outcomeState[, colNames[3]], outcomeState[, "Hospital.Name"]), ]
+    outcomeState <- outcomeState[!is.na(outcomeState[, colNames[3]]), ]
   }
   
   if (num == "best") {
